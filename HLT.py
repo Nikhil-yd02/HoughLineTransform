@@ -39,12 +39,6 @@ cv2.rectangle(img, (100, 100), (200, 200), 1, -1)
 # applying canny edge detection:
 edges = cv2.Canny(img, 100, 200)
 
-# displaying test image:
-cv2.imshow('coins', img)
-cv2.imshow('Canny edges', edges)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
 # calling hough_line transform function:
 accumulator, theta, rhos = hough_line(img)
 
