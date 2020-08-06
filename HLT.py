@@ -73,7 +73,7 @@ cv2.line(img, (x1, y1), (x2, y2), 255)
 
 # Sub-plotting accumulator, result:
 plt.subplot(121)
-plt.imshow(accumulator, origin='lower')
+plt.imshow(accumulator,cmap='gist_ncar', origin='lower')
 plt.title('Accumulator')
 plt.subplot(122)
 plt.imshow(img, cmap='gray', interpolation='nearest')
