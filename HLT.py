@@ -34,7 +34,7 @@ def hough_line(img):
 
 # creating a image:
 img = np.zeros((256, 256), dtype=np.uint8)
-cv2.line(img, (100, 100), (200, 200), (255, 255, 0))
+cv2.line(img, (100, 100), (200, 200), 255)
 
 # applying canny edge detection:
 edges = cv2.Canny(img, 100, 200)
