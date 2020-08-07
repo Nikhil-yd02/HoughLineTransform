@@ -52,10 +52,9 @@ plt.show()
 accumulator, thetas, rhos = hough_line(img)
 
 # peak finding based on max votes:
-mav_votes = np.argmax(accumulator)
-print('mav_votes =', mav_votes)
-rho = rhos[int(mav_votes/accumulator.shape[1])]
-theta = thetas[mav_votes % accumulator.shape[1]]
+mav_votes_pos = np.argmax(accumulator)
+rho = rhos[int(mav_votes_pos/accumulator.shape[1])]
+theta = thetas[mav_votes_pos % accumulator.shape[1]]
 print('rho =', rho, ', theta =', np.rad2deg(theta))
 
 # getting coordinates of the line we want to draw/project:
